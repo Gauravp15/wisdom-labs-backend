@@ -18,7 +18,6 @@ app.use(express.json());
 
 app.post("/", (req, res) => {
     let request = req;
-    console.log("Req body", request.body);
     const params = new URLSearchParams();
     for (const key in request.body) {
       params.append(key, request.body[key]);
